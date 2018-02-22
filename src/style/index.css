@@ -1,0 +1,200 @@
+@import url("https://fonts.googleapis.com/css?family=Rubik");
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+  -webkit-text-size-adjust: 100%; }
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block; }
+
+html {
+  line-height: 1; }
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; }
+
+input,
+button,
+textarea {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-overflow-style: none;
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  box-shadow: none;
+  border-radius: 0;
+  background-color: transparent; }
+  input:focus,
+  button:focus,
+  textarea:focus {
+    outline: none; }
+
+input {
+  background: transparent;
+  border: none;
+  outline: none;
+  appearance: none;
+  border-radius: 0;
+  white-space: nowrap; }
+  input:invalid {
+    box-shadow: none; }
+  input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    opacity: 0; }
+  input::outer-spin-button, input::inner-spin-button {
+    -webkit-appearance: none;
+    opacity: 0; }
+  input::-webkit-search-decoration, input::-webkit-search-cancel-button, input::-webkit-search-results-button, input::-webkit-search-results-decoration {
+    display: none;
+    width: 0;
+    height: 0;
+    opacity: 0; }
+  input::search-decoration, input::search-cancel-button, input::search-results-button, input::search-results-decoration {
+    display: none;
+    width: 0;
+    height: 0;
+    opacity: 0; }
+  input::-ms-clear, input::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0; }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto; }
+
+a img {
+  border: none; }
+
+i, em {
+  font-style: italic; }
+
+b, strong {
+  font-weight: 700; }
+
+table {
+  word-break: normal;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle; }
+
+ol, ul {
+  list-style: none; }
+
+q, blockquote {
+  quotes: none; }
+
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none; }
+
+::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+body {
+  background: #24213e;
+  font-family: "Rubik", sans-serif; }
+
+.container {
+  width: 965px;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto; }
+
+.header {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 75px; }
+  .header__logo {
+    width: 143px;
+    height: 22px;
+    margin-top: 9px;
+    margin-right: 48px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    display: inline-block;
+    vertical-align: top;
+    background: url("../static/svg/logo.svg") center center no-repeat;
+    background-size: 144px 22px; }
+  .header__navigation {
+    padding-top: 9px;
+    display: inline-block; }
+    .header__navigation__link {
+      font-size: 18px;
+      color: #eeeae7;
+      vertical-align: top;
+      position: relative;
+      display: inline-block;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top: 20px;
+      padding-bottom: 20px; }
+      .header__navigation__link.soon {
+        color: rgba(238, 234, 231, 0.5);
+        cursor: none; }
+        .header__navigation__link.soon:after {
+          display: block;
+          content: 'Soon';
+          position: absolute;
+          right: -30px;
+          top: 15px;
+          font-size: 12px;
+          color: #fbb587; }
+  .header__auth {
+    display: inline-block;
+    float: right;
+    padding-top: 9px;
+    position: relative; }
+    .header__auth:after {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      background: url("../static/svg/lock.svg") center center no-repeat;
+      background-size: 100% 100%;
+      top: 30px;
+      left: -20px; }
+    .header__auth__link {
+      font-size: 18px;
+      color: #fbb587;
+      vertical-align: top;
+      position: relative;
+      display: inline-block;
+      padding-left: 6px;
+      padding-right: 6px;
+      padding-top: 20px;
+      padding-bottom: 20px; }
