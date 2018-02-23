@@ -1,0 +1,78 @@
+$pl: 16px
+$pb: 16px
+$pr: 16px
+
+.episode
+    background: $dark
+    padding-top: 20px
+    padding-bottom: 48px
+    .container
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &__block
+        display: inline-block
+        border-radius: 4px
+        width: 472px
+        position: relative
+        max-width: 100%
+        cursor: pointer
+        overflow: hidden
+        margin-bottom: 16px 
+    &__last
+        width: 472px
+        max-width: 100%
+        .episode__info
+            padding-top: 11px
+        .episode__title
+            font-size: 18px
+        .episode__img
+            height: 100px
+    &__add
+        width: 472px
+        max-width: 100%
+        height: 376px
+        box-sizing: border-box
+        border: 2px solid #d8d8d8
+        border-radius: 4px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-size: 18px
+        color: $white
+        text-align: center
+        transition: .4s
+        cursor: pointer
+        &:hover
+            background: rgba($white, 0.3)
+    &__img
+        min-height: 100px
+        background: #c6c6c6
+        position: relative
+        height: 240px
+    &__tag
+        font-size: 18px
+        position: absolute
+        left: $pl
+        bottom: 3px
+        color: $blue
+    &__info
+        position: relative
+        padding-bottom: 45px
+        padding-top: 15px
+        background: #d8d8d8
+        padding-left: $pl
+        padding-right: $pr
+    &__time
+        font-size: 14px
+        color: rgba($dark,0.5)
+        position: absolute
+        left: $pl
+        bottom: $pb
+    &__duration
+        font-size: 14px
+        color: $dark
+        position: absolute
+        right: $pr
+        bottom: $pb
+
