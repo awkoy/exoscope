@@ -1,0 +1,36 @@
+.more-btn
+    display: inline-block
+    background: $more-btn-background
+    padding-bottom: 8px
+    padding-top: 7px
+    padding-right: 20px
+    padding-left: 20px
+    color: $white
+    font-size: 18px
+    &__container
+        text-align: center
+        border-top: 1px solid $more-btn-background
+        width: 100%
+    .dots
+        display: inline-block
+        height: $more-btn-dots-size
+        width: $more-btn-dots-size 
+        border-radius: 50%
+        background: $more-btn-dots-color
+        position: relative
+        margin-top: 8px
+        margin-left: 8px
+        margin-right: 14px
+        vertical-align: top
+        &:after,&:before
+            display: block
+            content: ''
+            height: $more-btn-dots-size
+            width: $more-btn-dots-size 
+            border-radius: 50%
+            background: $more-btn-dots-color
+            position: absolute
+        &:after
+            right: -7px
+        &:before
+            left: -7px

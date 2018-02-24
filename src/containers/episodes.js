@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Episode } from './../components';
+import { Episode, MoreButton } from './../components';
 
 class Episodes extends Component {
     constructor(props) {
@@ -44,6 +44,7 @@ class Episodes extends Component {
                 {this.getEpisodes()}
                 <div className="episode__last">{this.getLastEpisodes()}</div>
                 <div className="episode__add">Ad block</div>
+                <MoreButton func={()=>{}} content='Older episodes'/>
             </div>
         </section>
       );

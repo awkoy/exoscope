@@ -292,3 +292,46 @@ h3 {
     position: absolute;
     right: 16px;
     bottom: 16px; }
+
+.more-btn {
+  display: inline-block;
+  background: rgba(216, 216, 216, 0.15);
+  padding-bottom: 8px;
+  padding-top: 7px;
+  padding-right: 20px;
+  padding-left: 20px;
+  color: #eeeae7;
+  font-size: 18px; }
+  .more-btn__container {
+    text-align: center;
+    border-top: 1px solid rgba(216, 216, 216, 0.15);
+    width: 100%; }
+  .more-btn .dots {
+    display: inline-block;
+    height: 4px;
+    width: 4px;
+    border-radius: 50%;
+    background: #fbb587;
+    position: relative;
+    margin-top: 8px;
+    margin-left: 8px;
+    margin-right: 14px;
+    vertical-align: top; }
+    .more-btn .dots:after, .more-btn .dots:before {
+      display: block;
+      content: '';
+      height: 4px;
+      width: 4px;
+      border-radius: 50%;
+      background: #fbb587;
+      position: absolute; }
+    .more-btn .dots:after {
+      right: -7px; }
+    .more-btn .dots:before {
+      left: -7px; }
+
+.holding {
+  background: #17161b;
+  position: relative;
+  padding-top: 48px;
+  padding-bottom: 50px; }
