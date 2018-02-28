@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { MoreButton } from './../components';
+import { MoreButton, HoldTable, Button } from './../components';
 
 class Holding extends Component { 
     render() {
@@ -17,6 +17,16 @@ class Holding extends Component {
                             <div className="holding__info__change__percent">+2.37%</div>
                             <div className="holding__info__change__count">+$ 184,95</div>
                         </div>
+                    </div>
+                </div>
+                <HoldTable/>
+                <div className="holding__settings">
+                    <div className="holding__settings__left">
+                        <Button names={'btn-orange'} content='+ Add secondary currency'/>
+                        <Button content='Edit holdings'/>
+                    </div>
+                    <div className="holding__settings__right">
+                        <Button content='+ Add secondary currency'/>
                     </div>
                 </div>
                 <MoreButton func={()=>{}} content="Details of your holdings"/>

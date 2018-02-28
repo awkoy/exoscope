@@ -3,3 +3,55 @@
     position: relative
     padding-top: 48px
     padding-bottom: 50px
+    &__settings
+        display: flex
+        justify-content: space-between
+        &__left
+            .btn
+                margin-right: 16px
+    .more-btn
+        background: $black 
+        &__container
+            border-top: none
+            position: absolute
+            bottom: -32px
+            left: 0
+            right: 0
+    &__info
+        position: relative
+        margin-bottom: 25px
+        &__self
+            padding-left: 70px
+            position: relative
+            min-width: 200px
+            display: inline-block
+            background: url('../static/svg/hold.svg') left center no-repeat
+            background-size: 46px 48px
+            margin-right: 48px
+            &__title
+                color: $orange
+                font-size: 18px
+                margin-bottom: 8px
+            &__count
+                font-size: 40px
+                color: $white
+        &__change
+            padding-left: 66px
+            position: relative
+            min-width: 200px
+            display: inline-block
+            background: url('../static/svg/change.svg') left center no-repeat
+            background-size: 48px 43px
+            &__title
+                color: $grey
+                font-size: 16px
+                margin-bottom: 8px
+            &__percent
+                font-size: 32px
+                color: $green
+                display: inline-block
+                margin-right: 24px
+            &__count
+                font-size: 32px
+                display: inline-block
+                color: $white

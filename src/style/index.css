@@ -122,7 +122,8 @@ q:before, q:after, blockquote:before, blockquote:after {
 
 body {
   background: #24213e;
-  font-family: "Rubik", sans-serif; }
+  font-family: "Rubik", sans-serif;
+  overflow-x: hidden; }
 
 main {
   padding-top: 75px; }
@@ -169,7 +170,10 @@ h3 {
       padding-left: 6px;
       padding-right: 6px;
       padding-top: 20px;
-      padding-bottom: 20px; }
+      padding-bottom: 20px;
+      transition: .3s; }
+      .header__navigation__link:hover {
+        color: #fbb587; }
       .header__navigation__link.soon {
         color: rgba(238, 234, 231, 0.5);
         cursor: none; }
@@ -219,14 +223,55 @@ h3 {
           bottom: 0;
           margin: auto; }
 
+.footer {
+  background: #fbb587;
+  padding-bottom: 24px;
+  padding-top: 24px; }
+  .footer__routes {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 64px; }
+  .footer__social {
+    display: inline-block; }
+  .footer__rights {
+    display: inline-block;
+    margin-right: 180px; }
+    .footer__rights a {
+      opacity: 0.5; }
+  .footer a {
+    color: #17161b;
+    font-size: 16px;
+    line-height: 1;
+    margin-right: 16px;
+    cursor: pointer; }
+  .footer__download {
+    float: right;
+    width: 22px;
+    height: 24px;
+    background: url("../static/svg/download.svg") center center no-repeat;
+    background-size: 19px 24px;
+    cursor: pointer;
+    position: relative;
+    top: -5px; }
+
 .episode {
-  background: #24213e;
   padding-top: 20px;
   padding-bottom: 48px; }
   .episode .container {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    position: relative; }
+    .episode .container:after {
+      display: block;
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 592px;
+      background: url("../static/bg.png") center center;
+      top: -50px;
+      right: -250px;
+      z-index: -1; }
   .episode__block {
     display: inline-block;
     border-radius: 4px;
@@ -250,7 +295,7 @@ h3 {
     max-width: 100%;
     height: 376px;
     box-sizing: border-box;
-    border: 2px solid #d8d8d8;
+    border: 2px solid rgba(238, 234, 231, 0.5);
     border-radius: 4px;
     display: flex;
     justify-content: center;
@@ -260,8 +305,6 @@ h3 {
     text-align: center;
     transition: .4s;
     cursor: pointer; }
-    .episode__add:hover {
-      background: rgba(238, 234, 231, 0.3); }
   .episode__img {
     min-height: 100px;
     background: #c6c6c6;
@@ -301,7 +344,8 @@ h3 {
   padding-right: 20px;
   padding-left: 20px;
   color: #eeeae7;
-  font-size: 18px; }
+  font-size: 18px;
+  cursor: pointer; }
   .more-btn__container {
     text-align: center;
     border-top: 1px solid rgba(216, 216, 216, 0.15);
@@ -330,8 +374,216 @@ h3 {
     .more-btn .dots:before {
       left: -7px; }
 
+.btn {
+  display: inline-block;
+  border: 1px solid rgba(238, 234, 231, 0.6);
+  color: #eeeae7;
+  border-radius: 4px;
+  padding: 6px 12px;
+  font-size: 16px;
+  cursor: pointer; }
+  .btn.btn-orange {
+    border: 1px solid rgba(251, 181, 135, 0.6);
+    color: #fbb587; }
+
 .holding {
   background: #17161b;
   position: relative;
   padding-top: 48px;
   padding-bottom: 50px; }
+  .holding__settings {
+    display: flex;
+    justify-content: space-between; }
+    .holding__settings__left .btn {
+      margin-right: 16px; }
+  .holding .more-btn {
+    background: #17161b; }
+    .holding .more-btn__container {
+      border-top: none;
+      position: absolute;
+      bottom: -32px;
+      left: 0;
+      right: 0; }
+  .holding__info {
+    position: relative;
+    margin-bottom: 25px; }
+    .holding__info__self {
+      padding-left: 70px;
+      position: relative;
+      min-width: 200px;
+      display: inline-block;
+      background: url("../static/svg/hold.svg") left center no-repeat;
+      background-size: 46px 48px;
+      margin-right: 48px; }
+      .holding__info__self__title {
+        color: #fbb587;
+        font-size: 18px;
+        margin-bottom: 8px; }
+      .holding__info__self__count {
+        font-size: 40px;
+        color: #eeeae7; }
+    .holding__info__change {
+      padding-left: 66px;
+      position: relative;
+      min-width: 200px;
+      display: inline-block;
+      background: url("../static/svg/change.svg") left center no-repeat;
+      background-size: 48px 43px; }
+      .holding__info__change__title {
+        color: rgba(238, 234, 231, 0.5);
+        font-size: 16px;
+        margin-bottom: 8px; }
+      .holding__info__change__percent {
+        font-size: 32px;
+        color: #24aa00;
+        display: inline-block;
+        margin-right: 24px; }
+      .holding__info__change__count {
+        font-size: 32px;
+        display: inline-block;
+        color: #eeeae7; }
+
+table {
+  border-collapse: 0px;
+  width: 100%;
+  margin-bottom: 25px; }
+  table th {
+    font-size: 14px;
+    color: rgba(238, 234, 231, 0.5);
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: right; }
+    table th:first-child {
+      width: 40px; }
+    table th:nth-child(2) {
+      min-width: 80px;
+      text-align: left; }
+  table tr:first-child {
+    border-bottom: 1px solid rgba(238, 234, 231, 0.5); }
+
+.market {
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 48px; }
+  .market__info {
+    position: relative;
+    margin-bottom: 25px; }
+    .market__info__cap {
+      padding-left: 88px;
+      position: relative;
+      display: inline-block;
+      margin-right: 32px;
+      background: url("../static/svg/icon_capitalisation.svg") center left no-repeat;
+      background-size: 64px 64px; }
+      .market__info__cap__title {
+        font-size: 18px;
+        color: #fbb587;
+        margin-bottom: 8px; }
+      .market__info__cap__count {
+        color: #eeeae7;
+        font-size: 40px; }
+    .market__info__vol {
+      padding-left: 66px;
+      position: relative;
+      display: inline-block;
+      margin-right: 48px;
+      vertical-align: bottom;
+      background: url("../static/svg/change.svg") center left no-repeat;
+      background-size: 48px 43px; }
+      .market__info__vol__title {
+        font-size: 16px;
+        color: rgba(238, 234, 231, 0.5);
+        margin-bottom: 8px; }
+      .market__info__vol__count {
+        color: #eeeae7;
+        font-size: 32px; }
+    .market__info__dom {
+      padding-left: 66px;
+      position: relative;
+      display: inline-block;
+      margin-right: 48px;
+      vertical-align: bottom;
+      background: url("../static/svg/icon_bitcoin_dominance.svg") center left no-repeat;
+      background-size: 48px 48px; }
+      .market__info__dom__title {
+        font-size: 16px;
+        color: rgba(238, 234, 231, 0.5);
+        margin-bottom: 8px; }
+      .market__info__dom__count {
+        color: #eeeae7;
+        font-size: 32px; }
+
+.events {
+  background: #17161b;
+  padding-top: 48px;
+  padding-bottom: 48px; }
+  .events__today .events__item__title__tags {
+    color: #ee2e31; }
+  .events__title {
+    padding-left: 72px;
+    margin-bottom: 48px;
+    background: url("../static/svg/date.svg") left center no-repeat;
+    background-size: 48px 46px; }
+    .events__title__date {
+      font-size: 18px;
+      color: #fbb587;
+      margin-bottom: 8px; }
+    .events__title__count {
+      font-size: 40px;
+      color: #eeeae7; }
+  .events__container {
+    position: relative;
+    margin-bottom: 48px; }
+  .events__info {
+    padding-bottom: 16px;
+    border-bottom: 1px solid rgba(238, 234, 231, 0.1);
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end; }
+    .events__info__name {
+      font-size: 24px;
+      color: #fbb587; }
+    .events__info .orange {
+      color: #fbb587;
+      display: inline-block;
+      margin-right: 16px; }
+    .events__info__date {
+      font-size: 14px;
+      color: #eeeae7;
+      text-align: right; }
+  .events__item {
+    position: relative;
+    margin-bottom: 26px; }
+    .events__item__name {
+      color: rgba(238, 234, 231, 0.5);
+      padding-left: 32px;
+      padding-top: 5px;
+      background: url("../static/svg/btc.svg") left top no-repeat;
+      background-size: 24px 24px;
+      min-height: 25px;
+      width: 135px;
+      display: inline-block;
+      vertical-align: top; }
+    .events__item__info {
+      display: inline-block;
+      vertical-align: bottom; }
+    .events__item__title {
+      position: relative;
+      margin-bottom: 8px; }
+      .events__item__title__tags {
+        display: inline-block;
+        font-size: 14px;
+        color: #24aa00;
+        padding-top: 5px; }
+      .events__item__title__content {
+        color: #eeeae7;
+        font-size: 18px;
+        display: inline-block;
+        margin-right: 16px;
+        vertical-align: top; }
+    .events__item__content {
+      color: rgba(238, 234, 231, 0.5);
+      max-width: 500px;
+      font-size: 14px;
+      line-height: 1.43; }
